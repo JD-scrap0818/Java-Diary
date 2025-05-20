@@ -28,6 +28,7 @@ public class App {
         if (isCorrect) {
             System.out.println("Welcome to your diary");
             
+            
         } else {
             System.out.println("You are not allowed to access this diary");
     
