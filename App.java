@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args){
+
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> entrys = new ArrayList<String>();
 
@@ -27,54 +28,50 @@ public class App {
 
         if (isCorrect) {
             System.out.println("Welcome to your diary");
-            while (true){
-                System.out.println("do you want to enter a new entry? (y/n)");
-                String ans = scanner.nextLine();
-        //adds entry to the diary       
+            
+            while(true){
+                 System.out.println("do you want to enter a new entry? (y/n)");
+                 String ans = scanner.nextLine();
 
-            if (ans.equals("y")) {
+              //adds entry to the diary       
+              if (ans.equals("y")) {
 
-                System.out.println("Please enter your entry");
-                String entry = scanner.nextLine();
-                addEntry(entrys, entry);
-                System.out.println("Your entry has been added");
+                  System.out.println("Please enter your entry");
+                  String entry = scanner.nextLine();
 
-         //access entry in the diary   
+                  addEntry(entrys, entry);
+                  System.out.println("Your entry has been added");
 
-            } else if (ans.equals("n")) {
+              } //checks an entry 
+              else if (ans.equals("n")) {
+                  System.out.println("do you want to see your entries? (y/n)");
+                  ans = scanner.nextLine();
+                  if (ans.equals("y")) {
+                      System.out.println("Your entries are:");
+                      for (String entry : entrys) {
+                          System.out.println(entry);
+                      }
+                  } else if (ans.equals("n")) {
+                      System.out.println("Goodbye");
+                      break;
+                  } else {
+                      System.out.println("Please enter a valid answer");
+                  }
 
-                System.out.println("do you want to acess an entry? (y/n)");
-                ans = scanner.nextLine();
-
-                if (ans.equals("y")) {
-                    System.out.println("Please enter the index of the entry you want to access");
-                    int index = scanner.nextInt();
-                   
-                } else if (ans.equals("n")) {
-
-                    System.out.println("You have chosen not to access an entry");
-                    break;
-                } else {
-                    
-                    System.out.println("Invalid input");
-                }
-            } else {
-                System.out.println("Invalid input");
-            }
-
-        } 
-    
-        }
-
+              }
+              
             }
             
+             
+             
 
-        //ask for was entry you want to1234 access, or start a new entrie, if an entry exsitst in the diary replace that entry with the new entry.
+        }
 
     }
 
     public static void addEntry(ArrayList<String> entrys, String entry) {
         entrys.add(entry);
     }
+}
 
 
