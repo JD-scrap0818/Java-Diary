@@ -13,7 +13,7 @@ public class App {
         // asks for a password
         System.out.println("Please make your password");
         password = scanner.nextLine();
-        
+        while(true){
         // asks for a password
         System.out.println("Please enter your password for verfication");
         String pass = scanner.nextLine();
@@ -29,7 +29,7 @@ public class App {
         if (isCorrect) {
             System.out.println("Welcome to your diary");
             
-            while(true){
+            
                  System.out.println("do you want to enter a new entry? (y/n)");
                  String ans = scanner.nextLine();
 
