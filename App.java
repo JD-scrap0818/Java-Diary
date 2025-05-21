@@ -55,7 +55,7 @@ public class App {
                       System.out.println("Goodbye");
                       break;
                   } else {
-                      System.out.println("Please enter a valid answer");
+                      System.out.println("Please enter a valid answer!");
                   }
 
               }
