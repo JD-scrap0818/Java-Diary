@@ -20,15 +20,18 @@ public class App {
         
         if (pass.equals(password)) {
             System.out.println("Password is correct");
+            System.out.println();
             isCorrect = true;
         } else {
             System.out.println("Password is incorrect");
             isCorrect = false;
+            System.out.println("goodbye.");
+            break;
         }
 
         if (isCorrect) {
             System.out.println("Welcome to your diary");
-            
+            System.out.println();
             
                  System.out.println("do you want to enter a new entry? (y/n)");
                  String ans = scanner.nextLine();
@@ -36,17 +39,21 @@ public class App {
               //adds entry to the diary       
               if (ans.equals("y")) {
 
+                  System.out.println();
                   System.out.println("Please enter your entry");
                   String entry = scanner.nextLine();
 
                   addEntry(entrys, entry);
+                  System.out.println();
                   System.out.println("Your entry has been added");
 
               } //checks an entry 
               else if (ans.equals("n")) {
+                System.out.println();
                   System.out.println("do you want to see your entries? (y/n)");
                   ans = scanner.nextLine();
                   if (ans.equals("y")) {
+                    System.out.println();
                       System.out.println("Your entries are:");
                       for (String entry : entrys) {
                           System.out.println(entry);
