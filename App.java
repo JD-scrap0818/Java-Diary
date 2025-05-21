@@ -53,6 +53,7 @@ public class App {
                 System.out.println();
                   System.out.println("do you want to see your entries? (y/n)");
                   ans = scanner.nextLine();
+                  
                   if (ans.equals("y")) {
                     System.out.println();
                       System.out.println("Your entries are:");
